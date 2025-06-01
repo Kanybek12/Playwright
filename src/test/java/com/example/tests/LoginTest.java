@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginTest extends TestBase {
+
+    //New branch
     @Test
     void shouldLoginSuccessfully() {
         LoginPage loginPage = new LoginPage(page);
