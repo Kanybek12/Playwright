@@ -20,13 +20,16 @@ public class LoginPage {
     }
 
     public boolean isLoggedIn() {
-        try {
+        return page.waitForSelector(".product_label",
+                new Page.WaitForSelectorOptions().setTimeout(10000) // 10 seconds
+        ).isVisible();
+        /*try {
             // Wait up to 10 seconds for the element to appear
             return page.waitForSelector(".product_label",
                     new Page.WaitForSelectorOptions().setTimeout(10000) // 10 seconds
             ).isVisible();
         } catch (Exception e) {
             return false; // Return false if element doesn't appear within timeout
-        }
+        }*/
     }
 }
